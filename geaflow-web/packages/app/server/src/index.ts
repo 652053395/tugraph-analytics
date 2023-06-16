@@ -19,7 +19,6 @@ router.get(/^(?!\/api)\/.*/, async (ctx, next) => {
 });
 
 const filePath = path.resolve(__dirname, '../../client/dist');
-console.log('path', filePath)
 
 app.use(koaStatic(filePath));
 app.use(router.routes()).use(router.allowedMethods());
